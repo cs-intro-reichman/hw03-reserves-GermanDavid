@@ -23,12 +23,20 @@ public class Calendar0 {
 	// Tests the nDaysInMonth function.
 	private static void nDaysInMonthTest(int year) {
 		// Replace this comment with your code
+		System.out.println("The number of days in month 2 of year " + year + " is " + nDaysInMonth(2, year));
 	}
 
 	// Returns true if the given year is a leap year, false otherwise.
 	public static boolean isLeapYear(int year) {
 	    // Replace the following statement with your code
-		return false;
+		int a = year % 4;
+		int b = year % 100;
+		int c = year % 400;
+		if (a == 0 && b != 0 || c == 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	 
 	// Returns the number of days in the given month and year.
